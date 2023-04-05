@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #010122; */
+}
+
+.cont1 .header .header_con1 .header_box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont1 .header .header_con1 .header_box .box1{
+    font-size: xxx-large;
+    font-weight: 600;
+    color: aqua;
+    /* background-color: black; */
+}
+.cont1 .header .header_con1 .header_box .header_select{
+    padding: 5px 10px;
+    border: black;
+    border-radius: 10px;
+    margin: 0px 10px;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+.cont1 .header .header_con1 .header_box .box2{
+    padding: 15px 15px;
+}
+.header_box .box3 .cont1 button{
+    background-color: aquamarine;
+    margin: 4px 10px;
+    padding: 4px 10px;
+    font-size: x-large;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+}
+
+.main_body .cont1{
+    width: 100%;
+    align-items: center;
+    margin: 10px 10px;
+    display: flex;
+    font-size: x-large;
+    justify-content: center;
+    font-weight: bold;
+    color: grey;
+}
+
+.main_body .cont2 .boxes .box1{
+    font-size: xxx-large;
+    font-weight: 700;
+    color: aqua;
+}
+.main_body .cont2 .boxes .box2{
+    font-size: large;
+    font-weight: 600;
+    color: grey;
+}
+.main_body .cont2 .large_box .b1{
+    margin: 10px 10px;
+    font-size: large;
+    font-weight: 600;
+    color: grey;
+}
+.main_body .cont2 .large_box .b2{
+    margin: 10px 10px;
+    font-size: 80px;
+    font-weight: large;
+    color:white;
+    background-color: #010122;
+}
+
+.section2 .pointer{
+    font-size: large;
+    color: grey;
+    font-weight: 800;
+}
+.section2 h4{
+    margin: 10px 0px;
+}
+.section2 .table-text{
+    font-size: xx-large;
+    text-align: center;
+    color:white;
+    font-weight: 800;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 0px;
+}
+
+.footer .box1{
+    display: flex;;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: grey;
+    width: 300px;
+}
+.footer .box2{
+    text-align: center;
+    color: grey;
+    width: 300px;
+}
+
+.lastbtn button{
+    margin:10px 0px; 
+    padding: 8px 8px; 
+    border: 2px solid aqua; 
+    border-radius: 10px; 
+    background-color:#010122; 
+    color:white;
+    font-size: large;
+}
+
+.lastbtn button:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
