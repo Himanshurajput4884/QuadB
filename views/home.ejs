@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Holdfino</title>
     <link rel="stylesheet" type="text/css" href="../public/home.css" />
   </head>
   <body>
@@ -71,7 +71,7 @@
               style="display: flex; flex-direction: column;     align-items: center;"
             >
               <div class="b1"> Best time to trade </div>
-              <div class="b2"> ₹ 24,095,4 </div>
+              <div class="b2" id="average"> ₹ 24,095,4 </div>
               <div class="b1">
                 Average BTC/INR net price including commission
               </div>
@@ -140,40 +140,43 @@
             </tr>
           </thead>
           <tbody style="display:table-header-group">
-            <tr style="background-color: #2f2f3a; border-radius:10px;">
-              <td class="align-middle">
-                <h4 class="table-text">
-                  1
-                </h4>
-              </td>
-              <td class="align-middle">
-                <a href="" style="text-decoration:none">
-                <h4 class="table-text">
-                  WazirX
-                </h4>
-              </a>
-              </td>
-              <td class="align-middle">
-                <h4 class="table-text">
-                  ₹ 24,54,999
-                </h4>
-              </td>
-              <td class="align-middle">
-                <h4 class="table-text">
-                  ₹ 24,42,452 / ₹ 24,54,999
-                </h4>
-              </td>
-              <td class="align-middle">
-                <h4 class="table-text">
-                  -1.70 %
-                </h4>
-              </td>
-              <td class="align-middle">
-                <h4 class="table-text">
-                  ▼ ₹ 42,441
-                </h4>
-              </td>
-            </tr>
+            <% for(var i=1; i<=data.length; i++){ %>
+              
+              <tr style="background-color: #2f2f3a; border-radius:10px;">
+                <td class="align-middle">
+                  <h4 class="table-text">
+                    <%= i %>
+                  </h4>
+                </td>
+                <td class="align-middle">
+                  <a href="" style="text-decoration:none">
+                  <h4 class="table-text">
+                    <%= name[i-1] %>
+                  </h4>
+                </a>
+                </td>
+                <td class="align-middle">
+                  <h4 class="table-text">
+                    ₹ <%= data[i-1].last %>
+                  </h4>
+                </td>
+                <td class="align-middle">
+                  <h4 class="table-text">
+                    ₹ <%= data[i-1].buy %> / ₹ <%= data[i-1].sell %>
+                  </h4>
+                </td>
+                <td class="align-middle">
+                  <h4 class="table-text">
+                     <%= data[i-1].difference %>
+                  </h4>
+                </td>
+                <td class="align-middle">
+                  <h4 class="table-text">
+                     <%- data[i-1].saving %>
+                  </h4>
+                </td>
+              </tr>
+              <% } %>
           </tbody>
         </table>
       </div>
@@ -195,4 +198,12 @@
       </div>
     </div>
   </body>
+  <script>
+    var result = JSON.parse('<%- JSON.stringify(data)%>');
+    console.log(result);
+    var average = result[0].average;
+    console.log(average);
+    var avg = document.getElementById('average');
+    avg.innerHTML = "₹ "+average;
+  </script>
 </html>
